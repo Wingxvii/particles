@@ -16,6 +16,16 @@ public class ParticlePlay : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		if (partIndex == 1) {
+			if (part1[3].isStopped) {
+				foreach (ParticleSystem part in part1)
+				{
+					part.Play();
+				}
+			}
+		}
+
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			AllStop();
 			if (partIndex == 3)
